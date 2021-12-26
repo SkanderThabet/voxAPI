@@ -1,0 +1,25 @@
+{
+  "name": "voxapi",
+  "version": "1.0.0",
+  "description": "Vox Api Nodejs & MongoDB",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.1.3",
+    "nodemon": "^2.0.15",
+    "slugify": "^1.6.4"
+  },
+  "devDependencies": {
+    "colors": "^1.4.0",
+    "morgan": "^1.10.0"
+  }
+}
