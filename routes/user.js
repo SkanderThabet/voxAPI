@@ -109,7 +109,7 @@ router.post('/login',async (req,res,next) => {
         });
 
         if(!user){
-            res.status(400).json({
+            return res.status(400).json({
                 success:false,
                 msg:'User does not exists'
             })
@@ -118,7 +118,7 @@ router.post('/login',async (req,res,next) => {
         const isMatch = await bcryptjs.compare(password,user.password);
 
         if(!isMatch){
-            res.status(400).json({
+            return res.status(400).json({
                 success:false,
                 msg:'Wrong password ! Try again.'
             })
