@@ -71,26 +71,25 @@ router.post('/register', async (req, res, next) => {
          * Generating token for newly registered users 
          */
         
-        jwt.sign(payload,process.env.jwtUserSecret, {
-            expiresIn:36000
-        },(error,token) => {
-            if(error) throw error;
+         jwt.sign(payload, process.env.jwtUserSecret, {
+            expiresIn: 360000
+        }, (err, token) => {
+            if(err) throw err;
+            
             res.status(200).json({
-                success:true,
-                token:token
-            })
-        })
+                success: true,
+                token: token
+            });
+        });
 
-
-        // res.json({
-        //     success: true,
-        //     msg: 'User registered',
-        //     user: user
-        // });
 
 
     } catch (error) {
         console.log(error);
+        res.status(402).json({
+            success: false,
+            message: 'Something error occured'
+        })
     }
 });
 
