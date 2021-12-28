@@ -44,10 +44,7 @@ router.post('/register', async (req, res, next) => {
         }
         let user = new User();
     
-        user.username = slugify(`${firstname} ${lastname}`, {
-            replacement:'_',
-            lower:true
-        });
+        
         user.email = email;
         user.firstname = firstname;
         user.lastname = lastname;
@@ -58,6 +55,10 @@ router.post('/register', async (req, res, next) => {
 
         let size = 200;
         user.avatar = "https://gravatar.com/avatar/?s" + size + "&d=retro";
+        user.username = slugify(`${firstname} ${lastname}`, {
+            replacement:'_',
+            lower:true
+        });
 
         await user.save();
 
