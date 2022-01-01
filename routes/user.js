@@ -32,7 +32,7 @@ router.get('/',user_jwt,async (req,res,next) => {
  */
 
 router.post('/register', async (req, res, next) => {
-    const { email, password, firstname, lastname , dob } = req.body;
+    const { email, password, firstname, lastname , dob,avatar } = req.body;
 
     try {
         let user_exist = await User.findOne({ email:email });
@@ -49,6 +49,7 @@ router.post('/register', async (req, res, next) => {
         user.firstname = firstname;
         user.lastname = lastname;
         user.dob = dob;
+        user.avatar=avatar;
 
         const salt = await bcryptjs.genSalt(10);
         user.password= await bcryptjs.hash(password,salt);
