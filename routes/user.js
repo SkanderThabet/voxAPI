@@ -54,7 +54,7 @@ router.post('/register', async (req, res, next) => {
         user.password= await bcryptjs.hash(password,salt);
 
         let size = 200;
-        user.avatar = "https://gravatar.com/avatar/?s" + size + "&d=retro";
+        
         user.username = slugify(`${firstname} ${lastname}`, {
             replacement:'_',
             lower:true
