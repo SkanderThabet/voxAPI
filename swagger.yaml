@@ -38,51 +38,51 @@ paths:
       responses:
         default:
           description: "successful operation"
-  /user/createWithArray:
-    post:
-      tags:
-      - "User"
-      summary: "Creates list of users with given input array"
-      description: ""
-      operationId: "createUsersWithArrayInput"
-      produces:
-      - "application/xml"
-      - "application/json"
-      parameters:
-      - in: "body"
-        name: "body"
-        description: "List of user object"
-        required: true
-        schema:
-          type: "array"
-          items:
-            $ref: "#/definitions/User"
-      responses:
-        default:
-          description: "successful operation"
-  /user/createWithList:
-    post:
-      tags:
-      - "User"
-      summary: "Creates list of users with given input array"
-      description: ""
-      operationId: "createUsersWithListInput"
-      produces:
-      - "application/xml"
-      - "application/json"
-      parameters:
-      - in: "body"
-        name: "body"
-        description: "List of user object"
-        required: true
-        schema:
-          type: "array"
-          items:
-            $ref: "#/definitions/User"
-      responses:
-        default:
-          description: "successful operation"
-  /user/login:
+  # /user/createWithArray:
+  #   post:
+  #     tags:
+  #     - "User"
+  #     summary: "Creates list of users with given input array"
+  #     description: ""
+  #     operationId: "createUsersWithArrayInput"
+  #     produces:
+  #     - "application/xml"
+  #     - "application/json"
+  #     parameters:
+  #     - in: "body"
+  #       name: "body"
+  #       description: "List of user object"
+  #       required: true
+  #       schema:
+  #         type: "array"
+  #         items:
+  #           $ref: "#/definitions/User"
+  #     responses:
+  #       default:
+  #         description: "successful operation"
+  # /user/createWithList:
+  #   post:
+  #     tags:
+  #     - "User"
+  #     summary: "Creates list of users with given input array"
+  #     description: ""
+  #     operationId: "createUsersWithListInput"
+  #     produces:
+  #     - "application/xml"
+  #     - "application/json"
+  #     parameters:
+  #     - in: "body"
+  #       name: "body"
+  #       description: "List of user object"
+  #       required: true
+  #       schema:
+  #         type: "array"
+  #         items:
+  #           $ref: "#/definitions/User"
+  #     responses:
+  #       default:
+  #         description: "successful operation"
+  /api/vox/auth/login:
     post:
       tags:
       - "User"
