@@ -97,24 +97,35 @@ paths:
         name: "body"
         description: "Created user object"
         required: true
-        schema:
-          $ref: "#/definitions/User"
+            schema:      # Request body contents
+              type: User
+              properties:
+                email:
+                  type: string
+                password:
+                  type: string
+              example:   # Sample object
+                email: skander.thabet@esprit.tn
+                password: SkanderThabet12345
       responses:
-        "200":
-          description: "successful operation"
-          schema:
-            type: "string"
-          headers:
-            X-Rate-Limit:
-              type: "integer"
-              format: "int32"
-              description: "calls per hour allowed by the user"
-            X-Expires-After:
-              type: "string"
-              format: "date-time"
-              description: "date in UTC when token expires"
-        "400":
-          description: "Invalid email/password supplied"
+        '200':
+          description: OK    
+      # responses:
+      #   "200":
+      #     description: "successful operation"
+      #     schema:
+      #       type: "string"
+      #     headers:
+      #       X-Rate-Limit:
+      #         type: "integer"
+      #         format: "int32"
+      #         description: "calls per hour allowed by the user"
+      #       X-Expires-After:
+      #         type: "string"
+      #         format: "date-time"
+      #         description: "date in UTC when token expires"
+      #   "400":
+      #     description: "Invalid email/password supplied"
   /user/logout:
     get:
       tags:
