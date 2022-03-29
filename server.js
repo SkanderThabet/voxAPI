@@ -1,5 +1,5 @@
 const express = require("express");
-const colors = require("colors");
+// const colors = require("colors");
 const morgan = require("morgan");
 const dotenv = require("dotenv");
 const connectDB = require("./config/db");
@@ -29,10 +29,7 @@ app.use("/api/vox/auth", require("./routes/user"));
 
 const PORT = process.env.PORT || 3000;
 
-app.listen(
-  PORT,
-  console.log(`Server running on port ${PORT}`.red.underline.bold)
-);
+app.listen(PORT, console.log(`Server running on port ${PORT}`));
 
 /**
  * API Documentation : Swagger
