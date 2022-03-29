@@ -93,16 +93,12 @@ paths:
       - "application/xml"
       - "application/json"
       parameters:
-      - name: "email"
-        in: "body"
-        description: "The user's email for login"
+      - in: "body"
+        name: "body"
+        description: "Created user object"
         required: true
-        type: "string"
-      - name: "password"
-        in: "body"
-        description: "The password for login in clear text"
-        required: true
-        type: "string"
+        schema:
+          $ref: "#/definitions/User"
       responses:
         "200":
           description: "successful operation"
