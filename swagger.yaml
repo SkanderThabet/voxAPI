@@ -97,19 +97,20 @@ paths:
         name: "body"
         description: "Created user object"
         required: true
-            schema:      # Request body contents
-              type: User
-              properties:
-                email:
-                  type: string
-                password:
-                  type: string
-              example:   # Sample object
-                email: skander.thabet@esprit.tn
-                password: SkanderThabet12345
+        schema:
+          User:       # Schema name
+      type: object
+      properties:
+        email:
+          type: string
+        password:
+          type: string
+      example:   # Object-level example
+        email: skander.thabet@esprit.tn  
+        password: SkanderThabet12345
       responses:
-        '200':
-          description: OK    
+        default:
+          description: "successful operation"    
       # responses:
       #   "200":
       #     description: "successful operation"
