@@ -9,7 +9,7 @@ info:
   license:
     name: "Apache 2.0"
     url: "http://www.apache.org/licenses/LICENSE-2.0.html"
-host: "https://voxappli.herokuapp.com/"
+host: "voxappli.herokuapp.com/"
 basePath: "/api/vox/auth"
 tags:
 - name: "User"
@@ -94,12 +94,12 @@ paths:
       - "application/json"
       parameters:
       - name: "email"
-        in: "query"
+        in: "body"
         description: "The user's email for login"
         required: true
         type: "string"
       - name: "password"
-        in: "query"
+        in: "body"
         description: "The password for login in clear text"
         required: true
         type: "string"
