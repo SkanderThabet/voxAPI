@@ -10,7 +10,7 @@ info:
     name: "Apache 2.0"
     url: "http://www.apache.org/licenses/LICENSE-2.0.html"
 host: "voxappli.herokuapp.com"
-basePath: "api/vox/auth"
+basePath: "/api/vox/auth"
 tags:
 - name: "User"
   description: "Operations about user"
