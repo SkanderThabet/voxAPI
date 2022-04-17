@@ -255,10 +255,6 @@ router.patch("/resetPassword/:token", async (req, res, next) => {
     },
   };
 
-  /**
-   * Generating token for newly registered users
-   */
-
   jwt.sign(
     payload,
     process.env.jwtUserSecret,
